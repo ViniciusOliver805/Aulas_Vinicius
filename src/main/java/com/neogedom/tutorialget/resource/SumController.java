@@ -20,6 +20,11 @@ public class SumController {
         SumModel new_sum = new SumModel(n1, n2);
         return ResponseEntity.ok(new_sum.getSum());
     }
+
+    @PostMapping
+    public Double sumPost(@RequestBody Sum addSum) {
+        return addSum.getSum();
+    }
 }
 
 
